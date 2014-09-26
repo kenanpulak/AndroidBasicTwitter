@@ -2,9 +2,9 @@
 <merger version="2" >
 
     <dataSet config="main" >
-        <source path="/Users/kenanpulak/Downloads/android-rest-client-template-master/app/src/androidTest/res" />
-        <source path="/Users/kenanpulak/Downloads/android-rest-client-template-master/app/build/generated/res/rs/test/debug" />
-        <source path="/Users/kenanpulak/Downloads/android-rest-client-template-master/app/build/generated/res/generated/test/debug" />
+        <source path="/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/src/androidTest/res" />
+        <source path="/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/build/generated/res/rs/test/debug" />
+        <source path="/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/build/generated/res/generated/test/debug" />
     </dataSet>
 
 </merger>

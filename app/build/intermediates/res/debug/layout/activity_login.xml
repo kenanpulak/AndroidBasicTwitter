@@ -16,4 +16,4 @@
         android:onClick="loginToRest"
         android:text="@string/login_label" />
 
-</RelativeLayout><!-- From: file:/Users/kenanpulak/Downloads/android-rest-client-template-master/app/src/main/res/layout/activity_login.xml -->
+</RelativeLayout><!-- From: file:/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/src/main/res/layout/activity_login.xml -->

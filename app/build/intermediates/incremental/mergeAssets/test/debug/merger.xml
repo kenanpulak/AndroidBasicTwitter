@@ -2,7 +2,7 @@
 <merger version="2" >
 
     <dataSet config="main" >
-        <source path="/Users/kenanpulak/Downloads/android-rest-client-template-master/app/src/androidTest/assets" />
+        <source path="/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/src/androidTest/assets" />
     </dataSet>
 
 </merger>
