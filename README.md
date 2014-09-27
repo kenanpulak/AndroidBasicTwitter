@@ -2,17 +2,17 @@
 
 Overview: Build a simple Twitter client that supports viewing a Twitter timeline and composing a new tweet.
 
-Time spent: 3 hours spent in total
+Time spent: 5 hours spent in total
 
 Completed Required User Stories:
 
 * [x] Required: User can sign in to Twitter using OAuth login
 * [x] Required: User can view the tweets from their home timeline
+* [x] Required: User should be able to see the username, name, body and timestamp for each tweet
+* [x] Required: User should be displayed the relative timestamp for a tweet "8m", "7h"
 
 Incomplete Required User Stories
 
-* [x] Required: User should be able to see the username, name, body and timestamp for each tweet
-* [x] Required: User should be displayed the relative timestamp for a tweet "8m", "7h"
 * [x] Required: User can view more tweets as they scroll with infinite pagination
 * [x] Required: User can click a “Compose” icon in the Action Bar on the top right
 * [x] Required: User can then enter a new tweet and post this to twitter
@@ -36,4 +36,4 @@ Incomplete Optional User Stories
 
 # Walkthrough of all user stories:
 
-![Video Walkthrough](gridImageDemo.gif)
+![Video Walkthrough](twitterDemo.gif)
