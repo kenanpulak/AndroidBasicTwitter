@@ -2,9 +2,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.codepath.apps.basictwitter.TimelineActivity" >
-    <item android:id="@+id/action_settings"
-        android:title="@string/action_settings"
+    <item android:id="@+id/action_compose"
+        android:icon="@drawable/ic_compose_tweet"
+        android:title="@string/compose_tweet"
         android:orderInCategory="100"
-        app:showAsAction="never" />
+        android:showAsAction="always"
+        />
 </menu>
 <!-- From: file:/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/src/main/res/menu/timeline.xml -->

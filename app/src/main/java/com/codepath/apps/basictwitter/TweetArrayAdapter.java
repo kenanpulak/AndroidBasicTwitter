@@ -1,6 +1,7 @@
 package com.codepath.apps.basictwitter;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,11 +40,25 @@ public class TweetArrayAdapter extends ArrayAdapter<Tweet> {
         ImageView ivProfileImage = (ImageView) view.findViewById(R.id.ivProfileImage);
         TextView tvUserName = (TextView) view.findViewById(R.id.tvUserName);
         TextView tvBody = (TextView) view.findViewById(R.id.tvBody);
+        TextView tvScreenName = (TextView) view.findViewById(R.id.tvScreenName);
+        TextView tvTime = (TextView) view.findViewById(R.id.tvTime);
         ImageLoader imageLoader = ImageLoader.getInstance();
         // Populate views with tweet data
         imageLoader.displayImage(tweet.getUser().getProfileImageUrl(),ivProfileImage);
-        tvUserName.setText(tweet.getUser().getScreenName());
+        Typeface gothamMedium = Typeface.createFromAsset(getContext().getAssets(), "fonts/Gotham-Medium.otf");
+        tvUserName.setTypeface(gothamMedium);
+        tvUserName.setText(tweet.getUser().getName());
+
+        Typeface gothamBook = Typeface.createFromAsset(getContext().getAssets(), "fonts/Gotham-Book.otf");
+        tvScreenName.setTypeface(gothamBook);
+        tvScreenName.setText("@" + tweet.getUser().getScreenName());
+
+        tvTime.setTypeface(gothamBook);
+        tvTime.setText(Tweet.getRelativeTimeAgo(tweet.getCreatedAt()));
+
         tvBody.setText(tweet.getBody());
+        tvBody.setTypeface(gothamBook);
+
         return view;
     }
 }

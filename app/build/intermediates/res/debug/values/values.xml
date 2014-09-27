@@ -36,6 +36,13 @@
     <attr name="dividerHorizontal" format="reference" />
     <attr name="dividerVertical" format="reference" />
     <attr name="dropDownListViewStyle" format="reference" />
+    <!-- From: file:/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/src/main/res/values/attrs.xml -->
+    <eat-comment />
+
+    <attr name="fontPath" format="string" />
+    <!-- From: file:/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/20.0.0/res/values/values.xml -->
+    <eat-comment />
+
     <attr name="height" format="dimension" />
     <attr name="homeAsUpIndicator" format="reference" />
     <attr name="isLightTheme" format="boolean" />
@@ -74,6 +81,13 @@
     <bool name="abc_config_allowActionMenuItemTextWithIcon">false</bool>
     <bool name="abc_config_showMenuShortcutsWhenKeyboardPresent">false</bool>
     <bool name="abc_split_action_bar_is_narrow">true</bool>
+    <!-- From: file:/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/src/main/res/values/color.xml -->
+    <eat-comment />
+
+    <color name="LightGrey">#D3D3D3</color>
+    <color name="TwitterHandleGray">#8899a6</color>
+    <!-- From: file:/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/20.0.0/res/values/values.xml -->
+    <eat-comment />
 
     <color name="abc_search_url_text_normal">#7fa87f</color>
     <color name="abc_search_url_text_pressed">@android:color/black</color>
@@ -547,6 +561,7 @@
 
     <string name="action_settings">Settings</string>
     <string name="app_name">BasicTwitter</string>
+    <string name="compose_tweet">Compose</string>
     <string name="foo_label">\@foo</string>
     <string name="hello_world">Hello world!</string>
     <string name="login_label">Connect to Twitter</string>
@@ -690,6 +705,16 @@
     <style name="TextAppearance.AppCompat.Widget.PopupMenu.Large" parent="TextAppearance.AppCompat.Base.Widget.PopupMenu.Large" />
 
     <style name="TextAppearance.AppCompat.Widget.PopupMenu.Small" parent="TextAppearance.AppCompat.Base.Widget.PopupMenu.Small" />
+    <!-- From: file:/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/src/main/res/values/styles.xml -->
+    <eat-comment />
+
+    <style name="TextAppearance.FontPath" parent="android:TextAppearance">
+
+        <!-- Custom Attr -->
+        <item name="fontPath">fonts/Gotham-Medium.otf</item>
+    </style>
+    <!-- From: file:/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/20.0.0/res/values/values.xml -->
+    <eat-comment />
 
     <style name="TextAppearance.Widget.AppCompat.Base.ExpandedMenu.Item" parent="android:TextAppearance.Medium">
         <item name="android:textColor">?android:attr/textColorPrimaryDisableOnly</item>

@@ -8,7 +8,17 @@
         <source path="/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/20.0.0/assets" />
     </dataSet>
     <dataSet config="main" >
-        <source path="/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/src/main/assets" />
+        <source path="/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/src/main/assets" >
+            <file
+                name="fonts/Gotham-Book.otf"
+                path="/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/src/main/assets/fonts/Gotham-Book.otf" />
+            <file
+                name="fonts/Gotham-Medium.otf"
+                path="/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/src/main/assets/fonts/Gotham-Medium.otf" />
+            <file
+                name="fonts/Gotham-Light.otf"
+                path="/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/src/main/assets/fonts/Gotham-Light.otf" />
+        </source>
     </dataSet>
     <dataSet config="debug" >
         <source path="/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/src/debug/assets" />
