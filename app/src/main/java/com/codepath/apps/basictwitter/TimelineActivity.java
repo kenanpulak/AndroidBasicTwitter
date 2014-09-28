@@ -2,6 +2,7 @@ package com.codepath.apps.basictwitter;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,7 +22,7 @@ public class TimelineActivity extends Activity {
     private ArrayList<Tweet> tweets;
     private TweetArrayAdapter aTweets;
     private ListView lvTweets;
-
+    private SwipeRefreshLayout swipeContainer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,17 +34,32 @@ public class TimelineActivity extends Activity {
         tweets = new ArrayList<Tweet>();
         aTweets = new TweetArrayAdapter(this, tweets);
         lvTweets.setAdapter(aTweets);
-    }
+
+        swipeContainer = (SwipeRefreshLayout) findViewById(R.id.swipeContainer);
+        // Setup refresh listener which triggers new data loading
+        swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                aTweets.clear();
+                // Your code to refresh the list here.
+                // Make sure you call swipeContainer.setRefreshing(false)
+                // once the network request has completed successfully.
+                populateTimeline();
+            }
+        });
+        }
 
     public void populateTimeline(){
         client.getHomeTimeline(new JsonHttpResponseHandler(){
             @Override
             public void onSuccess(JSONArray jsonArray) {
                 aTweets.addAll(Tweet.fromJSONArray(jsonArray));
+                swipeContainer.setRefreshing(false);
             }
 
             @Override
             public void onFailure(Throwable e, String string) {
+                swipeContainer.setRefreshing(false);
                 Log.d("debug", e.toString());
                 Log.d("debug",string.toString());
             }
