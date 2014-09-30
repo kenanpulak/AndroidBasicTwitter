@@ -1,4 +1,4 @@
-package com.codepath.apps.basictwitter;
+package com.codepath.apps.basictwitter.activities;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
@@ -10,6 +10,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
 
+import com.codepath.apps.basictwitter.R;
+import com.codepath.apps.basictwitter.adapters.TweetArrayAdapter;
+import com.codepath.apps.basictwitter.applications.TwitterApplication;
+import com.codepath.apps.basictwitter.clients.TwitterClient;
+import com.codepath.apps.basictwitter.fragments.TweetFragment;
+import com.codepath.apps.basictwitter.listeners.EndlessScrollListener;
 import com.codepath.apps.basictwitter.models.Tweet;
 import com.loopj.android.http.JsonHttpResponseHandler;
 
@@ -31,7 +37,7 @@ public class TimelineActivity extends FragmentActivity implements TweetFragment.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timeline);
         client = TwitterApplication.getRestClient();
-        populateTimeline();
+        populateTimeline(0);
         lvTweets = (ListView) findViewById(R.id.lvTweets);
         tweets = new ArrayList<Tweet>();
         aTweets = new TweetArrayAdapter(this, tweets);
@@ -46,17 +52,36 @@ public class TimelineActivity extends FragmentActivity implements TweetFragment.
                 // Your code to refresh the list here.
                 // Make sure you call swipeContainer.setRefreshing(false)
                 // once the network request has completed successfully.
-                populateTimeline();
+                populateTimeline(0);
+            }
+        });
+
+        lvTweets.setOnScrollListener(new EndlessScrollListener() {
+            @Override
+            public void onLoadMore(int page, int totalItemsCount) {
+                // Triggered only when new data needs to be appended to the list
+                // Add whatever code is needed to append new items to your AdapterView
+                Tweet tweet= aTweets.getItem(totalItemsCount-1);
+                populateTimeline(tweet.getUid());
+                // or customLoadMoreDataFromApi(totalItemsCount);
             }
         });
         }
 
-    public void populateTimeline(){
-        client.getHomeTimeline(new JsonHttpResponseHandler(){
+    public void populateTimeline(final long max){
+        client.getHomeTimeline(max,new JsonHttpResponseHandler(){
             @Override
             public void onSuccess(JSONArray jsonArray) {
-                aTweets.addAll(Tweet.fromJSONArray(jsonArray));
-                swipeContainer.setRefreshing(false);
+                if (max != 0){
+                    ArrayList<Tweet> arrayList = Tweet.fromJSONArray(jsonArray);
+                    arrayList.remove(0);
+                    aTweets.addAll(arrayList);
+                    swipeContainer.setRefreshing(false);
+                }
+                else {
+                    aTweets.addAll(Tweet.fromJSONArray(jsonArray));
+                    swipeContainer.setRefreshing(false);
+                }
             }
 
             @Override
@@ -112,7 +137,7 @@ public class TimelineActivity extends FragmentActivity implements TweetFragment.
                 Tweet tweet = Tweet.fromJson(jsonObject);
                 progress.hide();
                 Log.d("Tweet posted",tweet.getBody());
-                aTweets.insert(tweet,0);
+                aTweets.insert(tweet, 0);
             }
 
             @Override

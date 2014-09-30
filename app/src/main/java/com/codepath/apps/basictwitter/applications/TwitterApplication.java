@@ -1,7 +1,8 @@
-package com.codepath.apps.basictwitter;
+package com.codepath.apps.basictwitter.applications;
 
 import android.content.Context;
 
+import com.codepath.apps.basictwitter.clients.TwitterClient;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
