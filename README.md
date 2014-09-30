@@ -20,14 +20,6 @@ Completed Required User Stories:
 * [x] Advanced: User can refresh tweets timeline by pulling down to refresh (i.e pull-to-refresh)
 * [x] Bonus: Compose activity is replaced with a modal overlay
 
-Incomplete Optional User Stories:
-
-* [x] Advanced: User can open the twitter app offline and see last loaded tweets
-* [x] Advanced: Tweets are persisted into sqlite and can be displayed from the local DB
-* [x] Advanced: User can tap a tweet to display a "detailed" view of that tweet
-* [x] Advanced: User can select "reply" from detail view to respond to a tweet
-* [x] Bonus: User can see embedded image media within the tweet detail view
-
 # Walkthrough of all user stories:
 
 ![Video Walkthrough](twitterDemo.gif)
