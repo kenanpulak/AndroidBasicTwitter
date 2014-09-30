@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.codepath.apps.basictwitter.TweetFragment">
+
+    <LinearLayout
+        android:id="@+id/llcompose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/etTweetMessage"
+            android:layout_toLeftOf="@+id/btnSend"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:hint="Enter Tweet Here"
+            android:layout_marginLeft="10dp"
+            android:lines="3"
+            android:maxLength="140"
+            />
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:background="@color/TwitterBlue"
+            android:textColor="@android:color/white"/>
+
+
+        </LinearLayout>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llcompose"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="140"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/TwitterBlue"
+        android:id="@+id/tvCharCount"
+        />
+</RelativeLayout>
+<!-- From: file:/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/src/main/res/layout/fragment_tweet.xml -->

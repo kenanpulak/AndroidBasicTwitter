@@ -85,6 +85,7 @@
     <eat-comment />
 
     <color name="LightGrey">#D3D3D3</color>
+    <color name="TwitterBlue">#55ACEE</color>
     <color name="TwitterHandleGray">#8899a6</color>
     <!-- From: file:/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/20.0.0/res/values/values.xml -->
     <eat-comment />
@@ -563,6 +564,7 @@
     <string name="app_name">BasicTwitter</string>
     <string name="compose_tweet">Compose</string>
     <string name="foo_label">\@foo</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hello_world">Hello world!</string>
     <string name="login_label">Connect to Twitter</string>
     <string name="title_activity_photos">Flickr Photos</string>

@@ -8323,6 +8323,8 @@ false
                 </string>
                 <string name="action_settings" >Settings
                 </string>
+                <string name="hello_blank_fragment" >Hello blank fragment
+                </string>
                 <string name="app_name" >BasicTwitter
                 </string>
                 <string name="tweet_body" >This is the tweet body
@@ -8393,7 +8395,7 @@ fonts/Gotham-Medium.otf
                     name="MyActionBar"
                     parent="@android:style/Widget.Holo.Light.ActionBar" >
                     <item name="android:background">
-#55ACEE
+@color/TwitterBlue
                     </item>
                     <item name="android:titleTextStyle">
 @style/MyActionBar.TitleTextStyle
@@ -8499,6 +8501,8 @@ fonts/Gotham-Book.otf
                 </color>
                 <color name="TwitterHandleGray" >#8899a6
                 </color>
+                <color name="TwitterBlue" >#55ACEE
+                </color>
             </file>
             <file
                 name="ic_twitter_placeholder"
@@ -8520,6 +8524,11 @@ fonts/Gotham-Book.otf
                 path="/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/src/main/res/drawable-hdpi/ic_twitter_placeholder.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
+            <file
+                name="fragment_tweet"
+                path="/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/src/main/res/layout/fragment_tweet.xml"
+                qualifiers=""
+                type="layout" />
         </source>
         <source path="/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/build/generated/res/rs/debug" />
         <source path="/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/build/generated/res/generated/debug" />

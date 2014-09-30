@@ -10,5 +10,6 @@
     <string name="foo_label">\@foo</string>
     <string name="tweet_body">This is the tweet body</string>
     <string name="compose_tweet">Compose</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

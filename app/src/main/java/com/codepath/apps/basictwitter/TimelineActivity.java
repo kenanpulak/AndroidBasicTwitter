@@ -1,22 +1,24 @@
 package com.codepath.apps.basictwitter;
 
-import android.app.Activity;
+import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.codepath.apps.basictwitter.models.Tweet;
 import com.loopj.android.http.JsonHttpResponseHandler;
 
 import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class TimelineActivity extends Activity {
+public class TimelineActivity extends FragmentActivity implements TweetFragment.TweetFragmentListener{
 
     private TwitterClient client;
     private ArrayList<Tweet> tweets;
@@ -80,9 +82,44 @@ public class TimelineActivity extends Activity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == R.id.action_compose) {
-            Toast.makeText(this,"Compose Tapped",Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this,"Compose Tapped",Toast.LENGTH_SHORT).show();
+            showTweetFragment();
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void showTweetFragment(){
+
+            FragmentManager fm = getSupportFragmentManager();
+            TweetFragment filterFragment = TweetFragment.newInstance("New Tweet");
+            filterFragment.show(fm, "fragment_tweet");
+
+    }
+
+    @Override
+    public void onFinishTweetFragment(String message){
+
+        final ProgressDialog progress = new ProgressDialog(this);
+        progress.setTitle("Loading");
+        progress.setMessage("Wait while loading...");
+        progress.show();
+
+        client.postTweet(message, new JsonHttpResponseHandler() {
+            @Override
+            public void onSuccess(JSONObject jsonObject) {
+
+                Tweet tweet = Tweet.fromJson(jsonObject);
+                progress.hide();
+                Log.d("Tweet posted",tweet.getBody());
+                aTweets.insert(tweet,0);
+            }
+
+            @Override
+            public void onFailure(Throwable e, String string) {
+
+                progress.hide();
+            }
+        });
     }
 }
