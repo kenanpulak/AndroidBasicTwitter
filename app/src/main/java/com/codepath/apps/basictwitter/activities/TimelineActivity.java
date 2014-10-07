@@ -12,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.codepath.apps.basictwitter.R;
+import com.codepath.apps.basictwitter.applications.TwitterApplication;
 import com.codepath.apps.basictwitter.clients.TwitterClient;
 import com.codepath.apps.basictwitter.fragments.HomeTimelineFragment;
 import com.codepath.apps.basictwitter.fragments.MentionsTimelineFragment;
@@ -57,6 +58,7 @@ public class TimelineActivity extends ActionBarActivity implements TweetFragment
                 .setTabListener(new SupportFragmentTabListener<MentionsTimelineFragment>(R.id.flContainer, this,
                         "mentions", MentionsTimelineFragment.class));
         actionBar.addTab(tab2);
+
     }
 
     @Override
@@ -102,14 +104,16 @@ public class TimelineActivity extends ActionBarActivity implements TweetFragment
         progress.setMessage("Wait while loading...");
         progress.show();
 
-        client.postTweet(message, new JsonHttpResponseHandler() {
+        TwitterApplication.getRestClient().postTweet(message, new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(JSONObject jsonObject) {
 
                 Tweet tweet = Tweet.fromJson(jsonObject);
                 progress.hide();
-                Log.d("Tweet posted",tweet.getBody());
-                //fragmentTweetsList.insertTweetAtIndex(tweet, 0);
+                Log.d("Tweet posted", tweet.getBody());
+
+                HomeTimelineFragment homeTimelineFragment = (HomeTimelineFragment) getSupportFragmentManager().findFragmentByTag("home");
+                homeTimelineFragment.insertTweetAtIndex(tweet, 0);
             }
 
             @Override

@@ -30,11 +30,8 @@ Completed User Stories (v2):
 * [x] Required: User can click on the profile image in any tweet to see another user's profile.
 * [x] Required: User can see picture, tagline, # of followers, # of following, and tweets of clicked user.
 * [x] Required: Profile view should include that user's timeline
-* [x] Optional: Implement tabs in a gingerbread-compatible approach
-
-Incomplete User Stories (v2):
-
 * [x] Required: User can scroll to bottom of either of these lists and new tweets will load ("infinite scroll")
+* [x] Optional: Implement tabs in a gingerbread-compatible approach
 
 # Walkthrough of all user stories:
 
