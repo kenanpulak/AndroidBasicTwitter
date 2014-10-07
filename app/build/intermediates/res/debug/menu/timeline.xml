@@ -8,5 +8,11 @@
         android:orderInCategory="100"
         app:showAsAction="always"
         />
+    <item android:id="@+id/action_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/profile_label"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        />
 </menu>
 <!-- From: file:/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/src/main/res/menu/timeline.xml -->

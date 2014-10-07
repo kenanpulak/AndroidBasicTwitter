@@ -1,0 +1,10 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.codepath.apps.basictwitter.fragments.UserTimelineFragment">
+
+
+
+</FrameLayout>
+<!-- From: file:/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/src/main/res/layout/fragment_user_timeline.xml -->

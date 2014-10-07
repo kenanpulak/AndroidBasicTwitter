@@ -18,6 +18,7 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
  */
 public class TwitterApplication extends com.activeandroid.app.Application {
 	private static Context context;
+    private TwitterClient client;
 
 	@Override
 	public void onCreate() {

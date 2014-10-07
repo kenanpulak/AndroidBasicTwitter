@@ -47,6 +47,10 @@
             android:name="com.codepath.apps.basictwitter.activities.TimelineActivity"
             android:label="@string/title_activity_timeline" >
         </activity>
+        <activity
+            android:name="com.codepath.apps.basictwitter.activities.ProfileActivity"
+            android:label="@string/profile_label" >
+        </activity>
     </application>
 
 </manifest>

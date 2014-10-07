@@ -1,6 +1,7 @@
 package com.codepath.apps.basictwitter.activities;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBar;
@@ -75,7 +76,16 @@ public class TimelineActivity extends ActionBarActivity implements TweetFragment
             showTweetFragment();
             return true;
         }
+        if (id == R.id.action_profile){
+            showProfile();
+            return true;
+        }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void showProfile(){
+        Intent i = new Intent(this, ProfileActivity.class);
+        startActivity(i);
     }
 
     private void showTweetFragment(){
