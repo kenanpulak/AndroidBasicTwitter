@@ -6,6 +6,6 @@
         android:icon="@drawable/ic_compose_tweet"
         android:title="@string/compose_tweet"
         android:orderInCategory="100"
-        android:showAsAction="always"
+        app:showAsAction="always"
         />
 </menu>

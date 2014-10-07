@@ -6,7 +6,7 @@
         android:icon="@drawable/ic_compose_tweet"
         android:title="@string/compose_tweet"
         android:orderInCategory="100"
-        android:showAsAction="always"
+        app:showAsAction="always"
         />
 </menu>
 <!-- From: file:/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/src/main/res/menu/timeline.xml -->

@@ -8417,7 +8417,7 @@ fonts/Gotham-Medium.otf
 
                 <style
                     name="MyCustomTheme"
-                    parent="@android:style/Theme.Holo.Light" >
+                    parent="@style/Theme.Base.AppCompat.Light.DarkActionBar" >
                     <item name="android:actionBarStyle">
 @style/MyActionBar
                     </item>
@@ -8529,6 +8529,61 @@ fonts/Gotham-Book.otf
                 path="/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/src/main/res/layout/fragment_tweet.xml"
                 qualifiers=""
                 type="layout" />
+            <file
+                name="fragment_tweets_list"
+                path="/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/src/main/res/layout/fragment_tweets_list.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="fragment_home_timeline"
+                path="/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/src/main/res/layout/fragment_home_timeline.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="fragment_mentions_timeline"
+                path="/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/src/main/res/layout/fragment_mentions_timeline.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="ic_home"
+                path="/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/src/main/res/drawable-xhdpi/ic_home.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_mentions"
+                path="/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/src/main/res/drawable-xhdpi/ic_mentions.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_mentions"
+                path="/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/src/main/res/drawable-xxhdpi/ic_mentions.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_home"
+                path="/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/src/main/res/drawable-hdpi/ic_home.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_mentions"
+                path="/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/src/main/res/drawable-hdpi/ic_mentions.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_mentions"
+                path="/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/src/main/res/drawable-mdpi/ic_mentions.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_home"
+                path="/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/src/main/res/drawable-xxhdpi/ic_home.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_home"
+                path="/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/src/main/res/drawable-mdpi/ic_home.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
         </source>
         <source path="/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/build/generated/res/rs/debug" />
         <source path="/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/build/generated/res/generated/debug" />

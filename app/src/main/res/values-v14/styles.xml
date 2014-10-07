@@ -9,7 +9,7 @@
 
     </style>
 
-    <style name="MyCustomTheme" parent="@android:style/Theme.Holo.Light">
+    <style name="MyCustomTheme" parent="@style/Theme.Base.AppCompat.Light.DarkActionBar">
         <item name="android:actionBarStyle">@style/MyActionBar</item>
         <item name="android:textViewStyle">@style/AppTheme.Widget.TextView</item>
     </style>
@@ -20,7 +20,7 @@
         <item name="fontPath">fonts/Gotham-Book.otf</item>
     </style>
 
-        <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
             <item name="android:background">@color/TwitterBlue</item>
             <item name="android:titleTextStyle">@style/MyActionBar.TitleTextStyle</item>
         </style>

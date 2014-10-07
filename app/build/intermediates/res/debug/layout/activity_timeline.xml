@@ -5,24 +5,16 @@
     tools:context="com.codepath.apps.basictwitter.activities.TimelineActivity">
 
 
-    <android.support.v4.widget.SwipeRefreshLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/swipeContainer"
+    <FrameLayout
+        android:id="@+id/flContainer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/lvTweets"
-        android:layout_centerVertical="true"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentBottom="true">
 
-    </android.support.v4.widget.SwipeRefreshLayout>
+    </FrameLayout>
 
 </RelativeLayout>
 <!-- From: file:/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/src/main/res/layout/activity_timeline.xml -->
