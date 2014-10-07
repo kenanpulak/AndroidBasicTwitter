@@ -1,5 +1,6 @@
 package com.codepath.apps.basictwitter.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 
 import com.codepath.apps.basictwitter.R;
 import com.codepath.apps.basictwitter.applications.TwitterApplication;
+import com.codepath.apps.basictwitter.fragments.UserTimelineFragment;
 import com.codepath.apps.basictwitter.models.User;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -17,23 +19,49 @@ import org.json.JSONObject;
 
 public class ProfileActivity extends FragmentActivity {
 
+    UserTimelineFragment mUserTimelineFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Intent intent = getIntent();
+        User user = (User) intent.getSerializableExtra("user");
+
         setContentView(R.layout.activity_profile);
-        loadProfileInfo();
+
+        mUserTimelineFragment = (UserTimelineFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentUserTimeline);
+
+        loadProfileInfo(user);
     }
 
-    private void loadProfileInfo(){
-        TwitterApplication.getRestClient().getMyInfo(new JsonHttpResponseHandler(){
-            @Override
-            public void onSuccess(JSONObject jsonObject) {
+    private void loadProfileInfo(User u){
 
-                User user = User.fromJSON(jsonObject);
-                getActionBar().setTitle("@"+ user.getScreenName());
-                populateProfileHeader(user);
-            }
-        });
+        if (u != null){
+            TwitterApplication.getRestClient().getUserInfo(u,new JsonHttpResponseHandler(){
+                @Override
+                public void onSuccess(JSONObject jsonObject) {
+
+                    User user = User.fromJSON(jsonObject);
+                    getActionBar().setTitle("@" + user.getScreenName());
+                    populateProfileHeader(user);
+                    mUserTimelineFragment.populateUserTimeline(user);
+
+                }
+            });
+        }
+        else {
+            TwitterApplication.getRestClient().getMyInfo(new JsonHttpResponseHandler() {
+                @Override
+                public void onSuccess(JSONObject jsonObject) {
+
+                    User user = User.fromJSON(jsonObject);
+                    getActionBar().setTitle("@" + user.getScreenName());
+                    populateProfileHeader(user);
+                    mUserTimelineFragment.populateUserTimeline(user);
+                }
+            });
+        }
     }
 
     private void populateProfileHeader(User u){

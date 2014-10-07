@@ -27,14 +27,14 @@ Completed User Stories (v2):
 * [x] Required: User can view the recent mentions of their username.
 * [x] Required: User can navigate to view their own profile
 * [x] Required: User can see picture, tagline, # of followers, # of following, and tweets on their profile.
+* [x] Required: User can click on the profile image in any tweet to see another user's profile.
+* [x] Required: User can see picture, tagline, # of followers, # of following, and tweets of clicked user.
+* [x] Required: Profile view should include that user's timeline
 * [x] Optional: Implement tabs in a gingerbread-compatible approach
 
 Incomplete User Stories (v2):
 
 * [x] Required: User can scroll to bottom of either of these lists and new tweets will load ("infinite scroll")
-* [x] Required: User can click on the profile image in any tweet to see another user's profile.
-* [x] Required: User can see picture, tagline, # of followers, # of following, and tweets of clicked user.
-* [x] Required: Profile view should include that user's timeline
 
 # Walkthrough of all user stories:
 

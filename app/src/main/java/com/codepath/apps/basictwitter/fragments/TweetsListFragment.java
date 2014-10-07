@@ -84,5 +84,7 @@ public class TweetsListFragment extends Fragment {
         aTweets.insert(tweet,index);
     }
 
+    public void clearAll() {aTweets.clear();}
+
 
 }

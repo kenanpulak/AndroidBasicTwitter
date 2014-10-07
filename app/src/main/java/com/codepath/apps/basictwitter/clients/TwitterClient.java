@@ -2,6 +2,7 @@ package com.codepath.apps.basictwitter.clients;
 
 import android.content.Context;
 
+import com.codepath.apps.basictwitter.models.User;
 import com.codepath.oauth.OAuthBaseClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.JsonHttpResponseHandler;
@@ -68,9 +69,24 @@ public class TwitterClient extends OAuthBaseClient {
         client.get(apiURL,null,handler);
     }
 
-    public void getUserTimeline(AsyncHttpResponseHandler handler){
+    public void getUserInfo(User u, AsyncHttpResponseHandler handler){
+        String apiURL = getApiUrl("users/show.json");
+        RequestParams params = new RequestParams();
+        params.put("user_id", String.valueOf(u.getUid()));
+        client.get(apiURL,params,handler);
+    }
+
+    public void getUserTimeline(User user, AsyncHttpResponseHandler handler){
         String apiURL = getApiUrl("statuses/user_timeline.json");
-        client.get(apiURL,null,handler);
+
+        if (user != null){
+            RequestParams params = new RequestParams();
+            params.put("user_id", String.valueOf(user.getUid()));
+            client.get(apiURL, params, handler);
+        }
+        else {
+            client.get(apiURL, null, handler);
+        }
     }
 
 }
