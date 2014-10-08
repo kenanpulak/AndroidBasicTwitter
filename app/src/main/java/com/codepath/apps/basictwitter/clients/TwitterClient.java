@@ -86,6 +86,8 @@ public class TwitterClient extends OAuthBaseClient {
         if (user != null){
             RequestParams params = new RequestParams();
             params.put("user_id", String.valueOf(user.getUid()));
+            params.put("count","200");
+
             client.get(apiURL, params, handler);
         }
         else {

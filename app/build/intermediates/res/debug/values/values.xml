@@ -84,6 +84,7 @@
     <!-- From: file:/Users/kenanpulak/Documents/android/AndroidBasicTwitter/app/src/main/res/values/color.xml -->
     <eat-comment />
 
+    <color name="Black">#000000</color>
     <color name="LightGrey">#D3D3D3</color>
     <color name="TwitterBlue">#55ACEE</color>
     <color name="TwitterHandleGray">#8899a6</color>

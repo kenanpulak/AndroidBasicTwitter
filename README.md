@@ -33,6 +33,10 @@ Completed User Stories (v2):
 * [x] Required: User can scroll to bottom of either of these lists and new tweets will load ("infinite scroll")
 * [x] Optional: Implement tabs in a gingerbread-compatible approach
 
-# Walkthrough of all user stories:
+# Walkthrough of all user stories (v1):
 
 ![Video Walkthrough](twitterDemo.gif)
+
+# Walkthrough of all user stories (v1):
+
+![Video Walkthrough](twitterDemoV2.gif)

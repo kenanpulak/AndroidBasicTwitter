@@ -4,5 +4,7 @@
     <color name="LightGrey">#D3D3D3</color>
     <color name="TwitterHandleGray">#8899a6</color>
     <color name="TwitterBlue">#55ACEE</color>
+    <color name="Black">#000000</color>
+
 
 </resources>

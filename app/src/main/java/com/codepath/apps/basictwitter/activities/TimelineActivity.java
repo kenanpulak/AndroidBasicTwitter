@@ -2,6 +2,7 @@ package com.codepath.apps.basictwitter.activities;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBar;
@@ -58,6 +59,9 @@ public class TimelineActivity extends ActionBarActivity implements TweetFragment
                 .setTabListener(new SupportFragmentTabListener<MentionsTimelineFragment>(R.id.flContainer, this,
                         "mentions", MentionsTimelineFragment.class));
         actionBar.addTab(tab2);
+
+        actionBar.setStackedBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.Black)));
+
 
     }
 
