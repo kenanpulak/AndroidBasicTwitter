@@ -37,6 +37,6 @@ Completed User Stories (v2):
 
 ![Video Walkthrough](twitterDemo.gif)
 
-# Walkthrough of all user stories (v1):
+# Walkthrough of all user stories (v2):
 
 ![Video Walkthrough](twitterDemoV2.gif)
